@@ -162,6 +162,22 @@ var SaveAsset = function () {
         return;
     }
 
+
+    if (!FieldValidation('#Description')) {
+        FieldValidationAlert('#Description', 'Asset Description is Required.', "warning");
+        return;
+    }
+
+    if (!FieldValidation('#AssetStatus')) {
+        FieldValidationAlert('#AssetStatus', 'Asset Asset Status is Required.', "warning");
+        return;
+    }
+
+    if (!FieldValidation('#LocationArea')) {
+        FieldValidationAlert('#LocationArea', 'Asset Location is Required.', "warning");
+        return;
+    }
+
     $("#btnSave").prop('value', 'Please Wait');
     $('#btnSave').prop('disabled', true);
 

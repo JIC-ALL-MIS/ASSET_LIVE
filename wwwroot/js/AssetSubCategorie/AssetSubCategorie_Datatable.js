@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    document.title = 'AssetSubCategorie';
+    document.title = 'AssetSubCategory';
 
     $("#tblAssetSubCategorie").DataTable({
         paging: true,
