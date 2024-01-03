@@ -31,8 +31,9 @@ $(document).ready(function () {
                     return "<a href='#' onclick=Details('" + row.Id + "');>" + row.Id + "</a>";
                 }
             },
+            { "data": "AssetDataID", "name": "AssetDataID" },
             {
-                data: "AssetId", "name": "AssetId", render: function (data, type, row) {
+                data: "AssetDisplay", "name": "AssetDisplay", render: function (data, type, row) {
                     return "<a href='#' onclick=AssetDetails('" + row.AssetId + "');>" + row.AssetDisplay + "</a>";
                 }
             },

@@ -279,6 +279,7 @@ var PreparedFormObj2 = function () {
     _FormData.append('ImageURLDetails', $('#ImageURLDetails')[0].files[0])
     _FormData.append('PurchaseReceipt', $("#PurchaseReceipt").val())
     _FormData.append('PurchaseReceiptDetails', $('#PurchaseReceiptDetails')[0].files[0])
+    _FormData.append('DateOfPurchase', $('#DateOfPurchase').val())
 
     _FormData.append('AssetStatus', $("#AssetStatus").val())
     _FormData.append('Note', $("#Note").val())
