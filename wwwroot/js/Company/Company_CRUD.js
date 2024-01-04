@@ -21,13 +21,16 @@ var SaveAssetRequest = function () {
         return;
     }
 
-    var _frmCompany = $("#frmCompany").serialize();
+    //var _frmCompany = $("#frmCompany").serialize();
+    var _frmCompany = PreparedFormObj2();
     $("#btnSave").val("Please Wait");
     $('#btnSave').attr('disabled', 'disabled');
     $.ajax({
         type: "POST",
         url: "/Company/AddEdit",
-        data: _frmCompany,
+        data: PreparedFormObj2(),
+        processData: false,
+        contentType: false,
         success: function (result) {
             Swal.fire({
                 title: result,
@@ -72,3 +75,14 @@ var Delete = function (id) {
         }
     });
 };
+
+
+var PreparedFormObj2 = function () {
+    var _FormData = new FormData()
+    _FormData.append('ID', $("#ID").val())
+    _FormData.append('Name', $("#Name").val())
+    _FormData.append('Code', $("#Code").val())
+    _FormData.append('ImageURL', $("#ImageURL").val())
+    _FormData.append('ImageURLDetails', $('#ImageURLDetails')[0].files[0])
+    return _FormData;
+}

@@ -56,9 +56,20 @@
                 "name": "DateOfPurchase",
                 "autoWidth": true,
                 "render": function (data) {
+
+                    
                     var date = new Date(data);
+                    
                     var month = date.getMonth() + 1;
-                    return (month.length > 1 ? month : month) + "/" + date.getDate() + "/" + date.getFullYear();
+
+                    var FormattedDate = (month.length > 1 ? month : month) + "/" + date.getDate() + "/" + date.getFullYear();
+                    
+                    if (FormattedDate == "1/1/1970") {
+                        return "N/A"
+                    } else {
+                        return FormattedDate
+                    }
+                    
                 }
             },
             { "data": "LocationName", "name": "LocationName" },
