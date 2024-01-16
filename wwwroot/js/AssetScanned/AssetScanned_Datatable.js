@@ -43,10 +43,10 @@
                     // Compare the date with today's date
                     if (date.setHours(0, 0, 0, 0) === today.setHours(0, 0, 0, 0)) {
                         // If the date is today, set background color to green
-                        return '<div style="background-color: green; color: white;"> Scanned </div>';
+                        return '<div style="background-color: green; color: white;"> Scanned <input type="hidden" name="TheScanner" value="S" /> </div>';
                     } else {
                         // Otherwise, set background color to the default
-                        return '<div style="background-color: red; color: white;"> Not Scanned </div>';
+                        return '<div style="background-color: red; color: white;"> Not Scanned  <input type="hidden" name="TheScanner" value="NS" /> </div>';
                     }
                 }
             },

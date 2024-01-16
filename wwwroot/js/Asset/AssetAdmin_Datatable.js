@@ -371,6 +371,7 @@ $(document).ready(function () {
             { "data": "AssetId", "name": "AssetId" },
             { "data": "AssetModelNo", "name": "AssetModelNo" },
             { "data": "Name", "name": "Name" },
+            { "data": "Description", "name": "Description" },
             { "data": "UnitPrice", "name": "UnitPrice" },
             { "data": "AssetStatusDisplay", "name": "AssetStatusDisplay" },
             {
