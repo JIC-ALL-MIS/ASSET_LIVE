@@ -216,6 +216,8 @@ var PreparedFormObj = function () {
     _FormData.append('Country', $("#Country").val())
     _FormData.append('RoleId', $("#RoleId").val())
     _FormData.append('IsApprover', $("#IsApprover").val())
+    _FormData.append('TypeOfAsset', $("#TypeOfAsset").val())
+    
 
     _FormData.append('EmployeeId', $("#EmployeeId").val())
     _FormData.append('DateOfBirth', $("#DateOfBirth").val())
