@@ -11,7 +11,8 @@
 
         buttons: [
             'pageLength',
-            'print'
+            'print',
+            'csv'
         ],
 
 
