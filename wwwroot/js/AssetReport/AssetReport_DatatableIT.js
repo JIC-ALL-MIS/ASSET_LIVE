@@ -1,21 +1,15 @@
 ﻿$(document).ready(function () {
     document.title = 'Asset Report';
-
     $("#tblAsset_report").DataTable({
-
         paging: true,
         select: true,
         "order": [[0, "desc"]],
         dom: 'Bfrtip',
-
-
         buttons: [
             'pageLength',
             'print',
             'csv'
         ],
-
-
         "processing": true,
         "serverSide": true,
         "filter": false, //Search Box
@@ -51,6 +45,7 @@
             { "data": "Quantity", "name": "Quantity" },
             { "data": "UnitName", "name": "UnitName" },
             { "data": "AssetStatusName", "name": "AssetStatusName" },
+            { "data": "UnitPrice", "name": "UnitPrice" },
             {
 
                 "data": "DateOfPurchase",
@@ -83,18 +78,10 @@
             { "data": "CompanyName", "name": "CompanyName" },
             { "data": "DepartmentName", "name": "DepartmentName" },
             { "data": "SubDepartmentName", "name": "SubDepartmentName" },
-
-
-
-
+            { "data": "AssignedName", "name": "AssignedName" },
         ],
-        //'columnDefs': [{
-        //    'targets': [44, 55],
-        //    'orderable': false,
-        // }],
-
+        
         "lengthMenu": [[10, 20, 30, 40, 50, 100, 1000], [10, 20, 30, 40, 50, 100, 1000]]
     });
-
 });
 
