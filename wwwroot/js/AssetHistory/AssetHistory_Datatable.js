@@ -1,7 +1,7 @@
 $(document).ready(function () {
     document.title = 'Asset History';
 
-    $("#tblAssetHistory").DataTable({
+    var table = $("#tblAssetHistory").DataTable({
         paging: true,
         select: true,
         "order": [[0, "desc"]],
@@ -12,7 +12,7 @@ $(document).ready(function () {
             'pageLength',
         ],
 
-        "processing": true,
+        "processing": false,
         "serverSide": true,
         "filter": true, //Search Box
         "orderMulti": false,
@@ -46,5 +46,17 @@ $(document).ready(function () {
         "lengthMenu": [[20, 10, 15, 25, 50, 100, 200], [20, 10, 15, 25, 50, 100, 200]]
     });
 
+
+
+    
+    setInterval(function () {
+        //console.log("Before reload");
+        $('#tblAssetHistory').DataTable().ajax.reload();
+        //console.log("After reload");
+    }, 1000); // 1000 milliseconds = 1 second
+
 });
+
+
+
 

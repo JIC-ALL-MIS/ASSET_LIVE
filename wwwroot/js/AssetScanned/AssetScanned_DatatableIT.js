@@ -29,6 +29,28 @@
             { "data": "Description", "name": "Description" },
             { "data": "Quantity", "name": "Quantity" },
             { "data": "AssetStatusName", "name": "AssetStatusName" },
+            { "data": "UnitPrice", "name": "UnitPrice" },
+            { "data": "DateOfPurchase", "name": "DateOfPurchase" },
+
+            { "data": "LocationName", "name": "LocationName" },
+            { "data": "AreaName", "name": "AreaName" },
+            { "data": "SubAreaName", "name": "SubAreaName" },
+
+            { "data": "CategoryName", "name": "CategoryName" },
+            { "data": "SubCategoryName", "name": "SubCategoryName" },
+            { "data": "SupplierName", "name": "SupplierName" },
+
+
+            { "data": "CompanyName", "name": "CompanyName" },
+            { "data": "DepartmentName", "name": "DepartmentName" },
+            { "data": "SubDepartmentName", "name": "SubDepartmentName" },
+
+            { "data": "AssignedName", "name": "AssignedName" },
+            
+
+            
+
+
             { "data": "AssetDateScanned", "name": "AssetDateScanned" },
             { "data": "AssetTimeScanned", "name": "AssetTimeScanned" },
             {
