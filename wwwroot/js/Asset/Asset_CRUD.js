@@ -214,8 +214,8 @@ var SaveAsset = function () {
 
 var UpdateBarcode = function () {
     var _AssetId = $("#AssetId").val();
-    if (_AssetId.length > 10) {
-        FieldValidationAlert('#AssetId', 'Max lenght is 10.', "warning");
+    if (_AssetId.length > 20) {
+        FieldValidationAlert('#AssetId', 'Max lenght is 20.', "warning");
         return;
     }
 
@@ -223,7 +223,8 @@ var UpdateBarcode = function () {
         title: 'Barcode Updated',
         icon: "success"
     }).then(function () {
-        $("#Barcode").JsBarcode(_AssetId);
+        $("#Barcode").JsBarcode();
+        //$("#Barcode").JsBarcode(_AssetId);
     });
 }
 
