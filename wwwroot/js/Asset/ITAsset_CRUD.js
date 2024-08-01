@@ -180,7 +180,8 @@ var SaveAsset = function () {
 
     $("#btnSave").prop('value', 'Please Wait');
     $('#btnSave').prop('disabled', true);
-
+    //alert("view");
+    
     $.ajax({
         type: "POST",
         url: "/Asset/ITAddEdit",
@@ -281,8 +282,8 @@ var PreparedFormObj2 = function () {
     _FormData.append('PurchaseReceipt', $("#PurchaseReceipt").val())
     _FormData.append('PurchaseReceiptDetails', $('#PurchaseReceiptDetails')[0].files[0])
     _FormData.append('DateOfPurchase', $('#DateOfPurchase').val())
-
-    _FormData.append('AssetStatus', $("#AssetStatus").val())
+    //console.log($("#AssetStatus1").val())
+    _FormData.append('AssetStatus', $("#AssetStatus1").val())
     _FormData.append('Note', $("#Note").val())
     _FormData.append('Barcode', $('#Barcode').attr('src'))
 
