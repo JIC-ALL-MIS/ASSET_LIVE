@@ -1,5 +1,5 @@
 ﻿var funAction = function (UserProfileId) {
-    alert(UserProfileId)
+    //alert(UserProfileId)
     if (DemoUserAccountLockAll() == 1) return;
 
     var _Action = $("#" + UserProfileId).val();
@@ -188,7 +188,7 @@ var SaveUpdateUserRole = function () {
 
 var AllocateAsset = function (id) {
     var url = "/UserManagement/AllocateAsset?id=" + id;
-    alert(url)
+    //alert(url)
     $('#titleExtraBigModal').html("Allocate Asset");
     loadExtraBigModal(url);
 };
