@@ -53,6 +53,7 @@
 
             { "data": "AssetDateScanned", "name": "AssetDateScanned" },
             { "data": "AssetTimeScanned", "name": "AssetTimeScanned" },
+            { data: "CreatedBy", name: "CreatedBy" },
             {
                 "data": "AssetDateScanned",
                 "name": "AssetDateScanned",
