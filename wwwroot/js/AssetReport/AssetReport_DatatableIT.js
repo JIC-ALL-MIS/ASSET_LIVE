@@ -79,6 +79,34 @@
             { "data": "DepartmentName", "name": "DepartmentName" },
             { "data": "SubDepartmentName", "name": "SubDepartmentName" },
             { "data": "AssignedName", "name": "AssignedName" },
+            //{ "data": "CreatedDate", "name": "CreatedDate" },
+            {
+
+                "data": "CreatedDate",
+                "name": "CreatedDate",
+                "autoWidth": true,
+                "render": function (data) {
+
+                    console.log(data)
+                    const dateObj = new Date(data);
+
+                    const year = dateObj.getFullYear();
+                    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+                    const day = String(dateObj.getDate()).padStart(2, '0');
+
+                    const hours = String(dateObj.getHours()).padStart(2, '0');
+                    const minutes = String(dateObj.getMinutes()).padStart(2, '0');
+                    const seconds = String(dateObj.getSeconds()).padStart(2, '0');
+
+
+                    const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+                    return formattedDateTime
+
+
+                },
+            },
+            { "data": "CreatedBy", "name": "CreatedBy" },
         ],
         
         "lengthMenu": [[10, 20, 30, 40, 50, 100, 10000000], [10, 20, 30, 40, 50, 100, "ALL"]]
