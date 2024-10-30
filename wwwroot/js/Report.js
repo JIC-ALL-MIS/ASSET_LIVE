@@ -9,8 +9,8 @@ var AssetStatusReport = function () {
 };
 
 
-var AssetAllocationReportByDate = function (StartDate, EndDate) {
-    location.href = "/Report/AssetAllocationReportByDate?StartDate= " + StartDate + "&EndDate= " + EndDate;
+var AssetAllocationReportByDate = function (StartDate, EndDate, Company, Department) {
+    location.href = "/Report/AssetAllocationReportByDate?StartDate= " + StartDate + "&EndDate= " + EndDate + "&Company= " + Company + "&Department= " + Department;
 };
 
 
