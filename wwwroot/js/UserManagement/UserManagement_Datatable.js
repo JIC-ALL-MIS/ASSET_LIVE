@@ -45,6 +45,13 @@
             { "data": "LastName", "name": "LastName", "autoWidth": true },
             { "data": "PhoneNumber", "name": "PhoneNumber", "autoWidth": true },
             { "data": "Email", "name": "Email", "autoWidth": true },
+            { "data": "Company", "name": "Company", "autoWidth": true },
+            {
+                data: "UserProfileId", "name": "UserProfileId", render: function (data, type, row) {
+                    return "<a href='#' class='fa fa-plus' onclick=AllocateAsset('" + row.UserProfileId + "');>Allocate</a>";
+                },
+                Width: "50px",
+            },
             {
                 "data": "CreatedDate",
                 "name": "CreatedDate",
@@ -55,12 +62,7 @@
                     return (month.length > 1 ? month : month) + "/" + date.getDate() + "/" + date.getFullYear();
                 }
             },
-            {
-                data: "UserProfileId", "name": "UserProfileId", render: function (data, type, row) {
-                    return "<a href='#' class='fa fa-plus' onclick=AllocateAsset('" + row.UserProfileId + "');>Allocate</a>";
-                },
-                Width: "50px",
-            },
+            
             {
                 data: null, render: function (data, type, row) {
                     return "<select id='" + row.UserProfileId + "' onchange=funAction('" + row.UserProfileId + "'); class='btn-sm' style='width: 70px;'>" +
